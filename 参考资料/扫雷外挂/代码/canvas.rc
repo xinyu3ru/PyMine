@@ -1,0 +1,231 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_TOOLBAR TOOLBAR DISCARDABLE  16, 16
+BEGIN
+    BUTTON      ID_TOOLBAR_RUN
+    SEPARATOR
+    BUTTON      ID_TOOLBAR_PAUSE
+    SEPARATOR
+    BUTTON      ID_TOOLBAR_STOP
+    BUTTON      ID_TOOLBAR_RAND
+    BUTTON      ID_TOOLBAR_SPRUN
+    BUTTON      ID_TOOLBAR_AI
+    BUTTON      ID_TOOLBAR_GETTAG
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_TOOLBAR             BITMAP  DISCARDABLE     "toolbar1.bmp"
+IDB_BITMAP              BITMAP  DISCARDABLE     "bitmap1.bmp"
+IDB_BOMBS               BITMAP  DISCARDABLE     "bombs.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "游戏(&G)", CHECKED
+    BEGIN
+        MENUITEM "开始(&B)\tCtrl+B",            ID_GAME_BEGIN
+        MENUITEM "暂停(&P)\tCtrl+P",            ID_GAME_PAUSE
+        MENUITEM "清理(&C)\tCtrl+C",            ID_GAME_CLEAR
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&E)\tCtrl+E",            ID_GAME_EXIT
+    END
+    POPUP "设置(&S)"
+    BEGIN
+        MENUITEM "设置...(&S)\tCtrl+S",         ID_SETUP_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "重获焦点(&R)\tCtrl+G",        ID_SETUP_GET
+    END
+    POPUP "关于(&A)"
+    BEGIN
+        MENUITEM "帮助(&H)\tCtrl+H",            ID_ABOUT_HELP
+        MENUITEM "版权(&R)\tCtrl+R",            ID_ABOUT_RIGHTS
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON                ICON    DISCARDABLE     "bomb.ico"
+IDI_ICON_SMALL          ICON    DISCARDABLE     "bombsmall.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SETUP DIALOGEX 0, 0, 193, 117
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "设置"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,136,96,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,79,96,50,14
+    GROUPBOX        "游戏难度",IDC_STATIC,7,7,179,57
+    CONTROL         "系统预设",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,13,25,42,8
+    CONTROL         "用户自定",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,13,46,43,8
+    CONTROL         "Slider2",IDC_SLIDER2,"msctls_trackbar32",WS_TABSTOP,60,
+                    19,116,10
+    LTEXT           "高度:",IDC_STATIC,61,46,19,8
+    LTEXT           "初级",IDC_STATIC,61,29,17,8
+    LTEXT           "中级",IDC_STATIC,112,29,17,8
+    LTEXT           "高级",IDC_STATIC,158,29,17,8
+    EDITTEXT        IDC_EDIT1,80,46,16,12,ES_NUMBER,WS_EX_RIGHT
+    LTEXT           "宽度:",IDC_STATIC,100,46,19,8
+    EDITTEXT        IDC_EDIT2,120,46,16,12,ES_NUMBER,WS_EX_RIGHT
+    LTEXT           "雷数:",IDC_STATIC,142,46,19,8
+    EDITTEXT        IDC_EDIT3,162,45,16,12,ES_NUMBER,WS_EX_RIGHT
+    GROUPBOX        "运行日志",IDC_STATIC,7,66,179,26
+    CONTROL         "记录日志到",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,77,50,8
+    EDITTEXT        IDC_EDIT4,66,75,107,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON1,172,75,12,11
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_SETUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 186
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 110
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STATUS              "状态栏"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_TOOLBAR_RUN          "显示无地雷区域"
+    ID_TOOLBAR_PAUSE        "停止自动扫雷"
+    ID_TOOLBAR_STOP         "重新开始"
+    ID_TOOLBAR_RAND         "随机点取"
+    ID_TOOLBAR_SPRUN        "快速显示无地雷区域"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_TOOLBAR_AI           "自动扫雷"
+    IDS_VERSION             "版本"
+    ID_TOOLBAR_GETTAG       "重获程序焦点"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Taiwan) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL
+#pragma code_page(950)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""resource.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Chinese (Taiwan) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
